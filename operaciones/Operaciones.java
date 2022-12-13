@@ -17,6 +17,8 @@ public class Operaciones {
 		System.out.println("Tercers numero: ");
 		numTres = sc.nextInt();
 		
+		System.out.println("La suma de los tres numeros es: " + (numUno + numDos + numTres));
+		
 		
 
 	
