@@ -19,6 +19,8 @@ public class Operaciones {
 		
 		System.out.println("La suma de los tres numeros es: " + (numUno + numDos + numTres));
 		
+			
+		System.out.println("Programa terminado"));
 		
 
 	
