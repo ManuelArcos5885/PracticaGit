@@ -25,6 +25,7 @@ public class Operaciones {
 		System.out.println("La suma de los tres numeros es: " + (numUno - numDos - numTres));
 		System.out.println("La media: " + (numUno + numDos + numTres)/3);
 		System.out.println("Programa terminado");
+		System.out.println("Modifico desde rama1");
 		
 
 	
