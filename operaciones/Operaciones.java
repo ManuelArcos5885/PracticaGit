@@ -16,11 +16,15 @@ public class Operaciones {
 		numDos = sc.nextInt();
 		System.out.println("Tercers numero: ");
 		numTres = sc.nextInt();
+		System.out.println("cuarto numero: ");
+		numTres = sc.nextInt();
+		System.out.println("quinto numero: ");
+		numTres = sc.nextInt();
 		
 		System.out.println("La suma de los tres numeros es: " + (numUno + numDos + numTres));
-		
-			
-		System.out.println("Programa terminado"));
+		System.out.println("La suma de los tres numeros es: " + (numUno - numDos - numTres));
+		System.out.println("La media: " + (numUno + numDos + numTres)/3);
+		System.out.println("Programa terminado");
 		
 
 	
