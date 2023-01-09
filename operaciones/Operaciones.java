@@ -26,9 +26,7 @@ public class Operaciones {
 		System.out.println("La media: " + (numUno + numDos + numTres)/3);
 		System.out.println("Programa terminado");
 		System.out.println("Modifico desde sdfsd");
-		
-
-	
+        System.out.println("Añado linea desde master");
 	}
 
 }
