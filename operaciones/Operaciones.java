@@ -1,32 +1,35 @@
 package operaciones;
 
-import java.util.Scanner;
 
 public class Operaciones {
 
-	public static void main(String[] args) {
-		System.out.println("Menu");
-		Scanner sc = new Scanner (System.in);
-		int numUno,numDos,numTres;
+	
+	
+	
+	
+	public static int suma(int num, int num2) {
+		int suma = num+num2;
+		return suma;
 		
-		System.out.println("Escriba tres numeros: ");
-		System.out.println("Primer numero: ");
-		numUno = sc.nextInt();
-		System.out.println("Segundo numero: ");
-		numDos = sc.nextInt();
-		System.out.println("Tercers numero: ");
-		numTres = sc.nextInt();
-		System.out.println("cuarto numero: ");
-		numTres = sc.nextInt();
-		System.out.println("quinto numero: ");
-		numTres = sc.nextInt();
-		
-		System.out.println("La suma de los tres numeros es: " + (numUno + numDos + numTres));
-		System.out.println("La suma de los tres numeros es: " + (numUno - numDos - numTres));
-		System.out.println("La media: " + (numUno + numDos + numTres)/3);
-		System.out.println("Programa terminado");
-		System.out.println("Modifico desde sdfsd");
-        System.out.println("Añado linea desde master");
 	}
+	
+	public static int resta(int num, int num2) {
+		int resta = num-num2;
+		return resta;
+		
+	}
+	
+	public static float media(int num, int num2) {
+		float media = (float) (num + num2 / 2.0);
+		return media;
+		
+	}
+	
+	public static int multiplicacion(int num, int num2) {
+		int multiplicacion = num*num2;
+		return multiplicacion;
+		
+	}
+	
 
 }
