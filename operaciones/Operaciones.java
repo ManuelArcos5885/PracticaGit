@@ -3,33 +3,48 @@ package operaciones;
 
 public class Operaciones {
 
-	
-	
-	
-	
-	public static int suma(int num, int num2) {
-		int suma = num+num2;
-		return suma;
-		
+	private int num1;
+	private int num2;
+
+	public Operaciones(int a, int b) {
+		num1 = a;
+		num2 = b;
 	}
-	
-	public static int resta(int num, int num2) {
-		int resta = num-num2;
-		return resta;
-		
+
+	public int suma() {
+		int resul = num1 + num2;
+		return resul;
 	}
-	
-	public static float media(int num, int num2) {
-		float media = (float) (num + num2 / 2.0);
-		return media;
-		
+
+	public int resta() {
+		int resul;
+		if (resta2())
+			resul = num1 - num2;
+		else
+			resul = num2 - num1;
+		return resul;
 	}
-	
-	public static int multiplicacion(int num, int num2) {
-		int multiplicacion = num*num2;
-		return multiplicacion;
-		
+
+	public boolean resta2() {
+		if (num1 >= num2) {
+			return true;
+		} else
+			return false;
 	}
-	
+
+	public int multiplica() {
+		int resul = num1 * num2;
+		return resul;
+	}
+
+	public int divide() throws ArithmeticException {
+
+		if (num2 == 0)
+			throw new ArithmeticException("División por cero");
+		else {
+			int resul = num1 / num2;
+			return resul;
+		}
+	}
 
 }
