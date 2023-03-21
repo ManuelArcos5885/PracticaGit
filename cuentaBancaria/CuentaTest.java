@@ -1,49 +1,65 @@
 package cuentaBancaria;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.Assert.*;
 
+import org.junit.After;
 import org.junit.Before;
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 
-import operaciones.Operaciones;
 
-class CuentaTest {
-
-	private Cuenta cuenta;
-	private float saldo;
-	
-	
+public class CuentaTest {
+	public Cuenta cuenta;
 	
 	@Before
-	public void crearCalculadora() {
+	public void crearCuenta() {
 	cuenta = new Cuenta("P3p4rt", 1000);
 	 }
 	
+	@After
+	public void eliminaCuenta() {
+	cuenta.setSaldo(0);
+	}
 	
 	@Test
-	void testGetSaldo() {
-		assertEquals(1000, cuenta.getSaldo());
+	public void testGetSaldo() {
+		assertEquals(1000, cuenta.getSaldo(),0.01);
 	}
 
 	@Test
-	void testSetSaldo() {
-		fail("Not yet implemented");
+	public void testSetSaldo() {
+		cuenta.setSaldo(1000);
+		assertEquals(1000, cuenta.getSaldo(),0.01);
 	}
 
 	@Test
-	void testIngresarDinero() {
-		fail("Not yet implemented");
+	public void testIngresarDinero() {
+		cuenta.ingresarDinero(100);
+		assertEquals(1100, cuenta.getSaldo(),0.01);
 	}
 
 	@Test
-	void testExtraerDinero() {
-		fail("Not yet implemented");
+	public void testExtraerDinero() {
+		try {
+			cuenta.extraerDinero(100);
+			assertEquals(900, cuenta.getSaldo(),0.01);
+		} catch (QuiebraException e) {
+			System.out.println(e.getMessage());
+		}
+		
 	}
 
+	
 	@Test
-	void testMostrarCuenta() {
-		fail("Not yet implemented");
+	public void masDeMil() {
+		cuenta.setSaldo(1400);
+		assertTrue(cuenta.masDeMil());
 	}
 
 }
+
+
+
+
+
+
+
